@@ -6,6 +6,9 @@ import { fileURLToPath } from 'url'
 import createError from 'http-errors'
 import logger from 'morgan'
 
+//connect to the databse with mongoose
+import './config/database.js'
+
 // import routers
 import { router as indexRouter } from './routes/index.js'
 import { router as digimonRouter } from './routes/digimon.js'
