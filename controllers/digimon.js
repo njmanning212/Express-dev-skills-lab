@@ -1,9 +1,16 @@
 
-import { rookieDigimon } from "../data/digimon.js"
+import { Digimon } from "../models/digimon.js"
 
 function index (req, res) {
-  res.render ('digimon/index', {
-    rookieDigimon : rookieDigimon
+  Digimon.find({})
+  .then(digimon => {
+    res.render('digimon/index.ejs', {
+      digimon : digimon
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/')
   })
 }
 

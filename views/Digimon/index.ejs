@@ -9,15 +9,15 @@
 <body>
   <h1>Rookie Digimon</h1>
   <ul>
-    <% rookieDigimon.forEach(digimon => { %>
-     <li>
-      Name:
-      <%= digimon.name %>,
-      Partner:
-      <%= digimon.partner %>,
-      Main Attack: 
-      <%= digimon.mainAttack %>
-     </li>
+    <% digimon.forEach(digimon => { %>
+    <li>
+    Name:
+    <%= digimon.name %>,
+    Partner:
+    <%= digimon.partner %>,
+    Main Attack: 
+    <%= digimon.mainAttack %>
+    </li>
     <% }) %>
   </ul>
 </body>
