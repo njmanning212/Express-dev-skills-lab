@@ -1,9 +1,9 @@
 import { Router } from 'express'
-import { listRookieDigimon } from '../controllers/digimon.js'
+import * as digimonCtrl from '../controllers/digimon.js'
 
 const router = Router()
 
 // GET localhost:3000/users
-router.get('/', listRookieDigimon)
+router.get('/', digimonCtrl.index)
 
 export { router }
