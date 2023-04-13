@@ -70,7 +70,8 @@ function edit (req, res) {
 }
 
 function update (req, res) {
-  // console.log(req.body)
+  req.body.isARookie = !!req.body.isARookie
+  console.log(req.body.isARookie)
   Digimon.findByIdAndUpdate(req.params.digimonId, req.body, {new: true})
   .then(digimon => {
     res.redirect(`/digimon/${digimon._id}`)

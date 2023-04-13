@@ -11,6 +11,8 @@
   <h1>Edit Digimon</h1>
   <form action="/digimon/<%= digimon._id %>?_method=PUT" method="POST" autocomplete="off">
     <input type="text" value="<%= digimon.name %>" name="name">
+    Check if a rookie
+    <input type="checkbox" name="isARookie">
     <button type="submit">Edit</button>
     <p><a href="/digimon">Digimon List</a></p>
   </form>
