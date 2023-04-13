@@ -12,6 +12,13 @@
   <ul>
     <% digimon.forEach(digimon => { %>
     <li>
+      <form 
+      action="/digimon/<%= digimon._id %>?_method=DELETE"
+      class="delete-form"
+      method="POST"
+      >
+      <button type="submit">X</button>
+      </form>
     Name:
     <a href="/digimon/<%= digimon._id %>"><%= digimon.name %></a>
     </li>
