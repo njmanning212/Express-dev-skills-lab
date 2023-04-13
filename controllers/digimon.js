@@ -18,7 +18,13 @@ function digimonNew (req, res) {
   res.render('digimon/new')
 }
 
+function create(req, res) {
+
+}
+
+
 export {
   index,
   digimonNew as new,
+  create,
 }
