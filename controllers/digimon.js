@@ -56,10 +56,24 @@ function deleteDigimon (req, res) {
   })
 }
 
+function edit (req, res) {
+  Digimon.findById(req.params.digimonId)
+  .then(digimon => {
+    res.render('digimon/edit', {
+      digimon
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/digimon')
+  })
+}
+
   export {
   index,
   digimonNew as new,
   create,
   show,
   deleteDigimon as delete,
+  edit,
 }

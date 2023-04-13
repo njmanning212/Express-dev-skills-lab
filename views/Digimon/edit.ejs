@@ -8,12 +8,11 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Digimon</h1>
-  <a href="/digimon/<%= digimon._id%>/edit">
-    <button>Edit</button>
-  </a>
-  <h2>Name: <%= digimon.name %></h2>
-  <p>Is a rookie? <%= digimon.isARookie %></p>
-  <a href="/digimon">Back To Digimon</a>
+  <h1>New Digimon</h1>
+  <form action="/digimon" method="POST" autocomplete="off">
+    <input type="text" value="<%= digimon.name %>" name="name">
+    <button type="submit">Save Digimon</button>
+    <p><a href="/digimon">Digimon List</a></p>
+  </form>
 </body>
 </html>

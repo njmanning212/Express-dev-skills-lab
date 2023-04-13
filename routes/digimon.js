@@ -7,6 +7,7 @@ const router = Router()
 router.get('/', digimonCtrl.index)
 router.get('/new', digimonCtrl.new)
 router.get('/:digimonId', digimonCtrl.show)
+router.get('/:digimonId/edit', digimonCtrl.edit)
 router.post('/', digimonCtrl.create)
 router.delete('/:digimonId', digimonCtrl.delete)
 
