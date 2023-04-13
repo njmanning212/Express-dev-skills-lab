@@ -45,9 +45,21 @@ function show (req, res) {
   })
 }
 
-export {
+function deleteDigimon (req, res) {
+  Digimon.findByIdAndDelete(req.params.digimonId)
+  .then(digimon => {
+    res.redirect('/digimon')
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/digimon')
+  })
+}
+
+  export {
   index,
   digimonNew as new,
   create,
   show,
+  deleteDigimon as delete,
 }

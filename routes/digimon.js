@@ -8,5 +8,6 @@ router.get('/', digimonCtrl.index)
 router.get('/new', digimonCtrl.new)
 router.get('/:digimonId', digimonCtrl.show)
 router.post('/', digimonCtrl.create)
+router.delete('/:digimonId', digimonCtrl.delete)
 
 export { router }
