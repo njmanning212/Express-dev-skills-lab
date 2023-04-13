@@ -69,6 +69,18 @@ function edit (req, res) {
   })
 }
 
+function update (req, res) {
+  // console.log(req.body)
+  Digimon.findByIdAndUpdate(req.params.digimonId, req.body, {new: true})
+  .then(digimon => {
+    res.redirect(`/digimon/${digimon._id}`)
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('digimon')
+  })
+}
+
   export {
   index,
   digimonNew as new,
@@ -76,4 +88,5 @@ function edit (req, res) {
   show,
   deleteDigimon as delete,
   edit,
+  update,
 }

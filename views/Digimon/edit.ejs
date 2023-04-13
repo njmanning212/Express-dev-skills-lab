@@ -8,10 +8,10 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>New Digimon</h1>
-  <form action="/digimon" method="POST" autocomplete="off">
+  <h1>Edit Digimon</h1>
+  <form action="/digimon/<%= digimon._id %>?_method=PUT" method="POST" autocomplete="off">
     <input type="text" value="<%= digimon.name %>" name="name">
-    <button type="submit">Save Digimon</button>
+    <button type="submit">Edit</button>
     <p><a href="/digimon">Digimon List</a></p>
   </form>
 </body>
