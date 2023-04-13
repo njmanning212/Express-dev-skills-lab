@@ -20,6 +20,10 @@ const app = express()
 app.set('view engine', 'ejs')
 
 // basic middleware
+app.use(function (req, res, next){
+  req.myName = 'Nick'
+  next()
+})
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
