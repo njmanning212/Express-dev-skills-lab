@@ -5,7 +5,8 @@ function index (req, res) {
   Digimon.find({})
   .then(digimon => {
     res.render('digimon/index.ejs', {
-      digimon : digimon
+      digimon : digimon,
+      myName: req.myName
     })
   })
   .catch(error => {
