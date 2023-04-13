@@ -12,11 +12,7 @@
     <% digimon.forEach(digimon => { %>
     <li>
     Name:
-    <%= digimon.name %>,
-    Partner:
-    <%= digimon.partner %>,
-    Main Attack: 
-    <%= digimon.mainAttack %>
+    <a href="/digimon/<%= digimon._id %>"><%= digimon.name %></a>
     </li>
     <% }) %>
   </ul>

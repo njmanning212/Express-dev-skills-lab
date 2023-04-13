@@ -30,9 +30,23 @@ function create(req, res) {
   })
 }
 
+function show (req, res) {
+  Digimon.findById(req.params.digimonId)
+  .then(digimon =>{
+    console.log(digimon)
+    res.render('digimon/show', {
+      digimon : digimon,
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/digimon')
+  })
+}
 
 export {
   index,
   digimonNew as new,
   create,
+  show,
 }
