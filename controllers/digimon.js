@@ -19,7 +19,15 @@ function digimonNew (req, res) {
 }
 
 function create(req, res) {
-
+  req.body.isARookie = false
+  Digimon.create(req.body)
+  .then(digimon => {
+    res.redirect('/digimon')
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/digimon')
+  })
 }
 
 
